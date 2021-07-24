@@ -1,34 +1,16 @@
-.page-header {
-}
-.page-header__logo {
-}
-.main-nav {
-}
-.main-nav__center {
-}
-.main-nav__toggle {
-}
-.visually-hidden {
-}
-.main-nav__list {
-}
-.site-list {
-}
-.site-list__item {
-}
-.main-nav__search {
-}
-.main-nav__search--no-desktop {
-}
-.main-nav__basket {
-}
-.basket-text {
-}
-.user-nav__list {
-}
-.user-list {
-}
-.user-nav__item {
-}
-.main-nav__legend {
-}
+Папка для скомпилированных стилей. Файлы препроцессоров держите в другой папке. Например, для *.less используйте папку less, для *.scss используйте папку sass.
+
+Скомпилированные CSS-файлы не отправляйте в репозиторий. В репозитории должны быть только файлы препроцессора.
+
+--
+
+Структура файлов:
+
+css/
+| - style.css
+less/
+| - style.less
+| - [другие *.less файлы]
+sass/
+| - style.scss
+| - [другие *.scss файлы]
