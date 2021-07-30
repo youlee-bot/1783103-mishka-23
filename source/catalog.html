@@ -3,48 +3,41 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="page-header">
       <a href="index.html" class="page-header__logo"></a>
-      <nav class="main-nav user-nav user-menu">
-        <div class="main-nav__wrapper">
+      <nav class="main-nav">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item">
+            <li class="main-nav__item">
               <a href="catalog.html">Каталог товаров</a>
             </li>
-            <li class="site-list__item">
-              <a href="">Вязание на заказ</a>
+            <li class="main-nav__item">
+              <a href="#">Вязание на заказ</a>
             </li>
           </ul>
           <div class="main-nav__search search">
-            <span class="main-nav__search main-nav__search--no-desktop search__icon">Поиск по сайту</span>
+            <a href="#">Поиск по сайту</a>
           </div>
           <div class="main-nav__basket">
-            <span class="basket-text">Корзина: пока пуста</span>
+            <a href="#">Корзина: пока пуста</a>
           </div>
-          <ul class="user-nav__list user-menu__list">
-            <li class="user-menu__item">
-              <a href="">Новые поступления</a>
-            </li>
-            <li class="user-menu__item">
-              <a href="">Распродажа</a>
-            </li>
-          </ul>
-        </div>
       </nav>
-      <span class="page-header__legend page-header__legend--no-mobile">Бесплатная доставка по России</span>
     </header>
 
     <main class="page-main">
-      <section class="store-items catalog">
-        <div class="store-items__wrapper">
+      <section class="catalog">
+        <div class="catalog__wrapper">
           <header>
-            <h2>Каталог товаров</h2>
+            <h2 class="page-title">Каталог товаров</h2>
           </header>
           <ul class="catalog__list store-item">
-            <li class="store-item__item">
+            <li class="catalog__item">
               <img src="img/photo-1.jpg" height="195" width="260" alt="Зайчик-попрыгайчик" class="store-item__img" />
               <div class="store-item__body">
                 <h3 class="store-item__title">Зайчик-попрыгайчик</h3>
@@ -80,8 +73,8 @@
         </div>
       </section>
 
-      <article class="article-container article">
-        <div class="article-container__wrapper">
+      <article class="article">
+        <div class="article__wrapper">
           <div class="article">
             <div class="article__header">
               <h2 class="article__title">Процесс производства</h2>
@@ -120,7 +113,7 @@
           </svg>
         </div>
         <div class="page-footer__copyright">
-          <a href=""></a>
+          <a href="#">Разработано</a>
         </div>
       </div>
     </footer>

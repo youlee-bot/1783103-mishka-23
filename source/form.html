@@ -3,112 +3,105 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="page-header">
       <a href="index.html" class="page-header__logo"></a>
-      <nav class="main-nav user-nav user-menu">
-        <div class="main-nav__wrapper">
+      <nav class="main-nav">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item">
+            <li class="main-nav__item">
               <a href="catalog.html">Каталог товаров</a>
             </li>
-            <li class="site-list__item">
-              <a href="">Вязание на заказ</a>
+            <li class="main-nav__item">
+              <a href="#">Вязание на заказ</a>
             </li>
           </ul>
           <div class="main-nav__search search">
-            <span class="main-nav__search main-nav__search--no-desktop search__icon">Поиск по сайту</span>
+            <a href="#">Поиск по сайту</a>
           </div>
           <div class="main-nav__basket">
-            <span class="basket-text">Корзина: пока пуста</span>
+            <a href="#">Корзина: пока пуста</a>
           </div>
-          <ul class="user-nav__list user-menu__list">
-            <li class="user-menu__item">
-              <a href="">Новые поступления</a>
-            </li>
-            <li class="user-menu__item">
-              <a href="">Распродажа</a>
-            </li>
-          </ul>
-        </div>
       </nav>
-      <span class="page-header__legend page-header__legend--no-mobile">Бесплатная доставка по России</span>
     </header>
 
     <main class="page-main">
-      <section class="filter filter-container">
-        <header class="filter-container__header">
-          <h2 class="filter__title">Вязание на заказ</h2>
+      <section class="filter">
+        <div class="filter__wrapper">
+        <header class="filter__header">
+          <h2 class="filter__title page-title">Вязание на заказ</h2>
           <p class="filter__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         </header>
-        <div class="filter-container__wrapper">
           <form class="filter__form filter-content" method="get" action="https://echo.htmlacademy.ru">
-            <fieldset class="filter__fieldset fieldset-content">
-              <legend>Тип</legend>
+            <fieldset class="fieldset-content">
+              <legend class="fieldset-content__legend">Тип</legend>
               <ul class="fieldset-content__list">
                 <li class="fieldset-content__item">
                   <input type="radio" class="visually-hidden fieldset-content__radio" name="interior accessory" id="Interior-accessory" checked />
-                  <label for="Interior-accessory">Аксессуар для интерьера</label>
+                  <label class="fieldset-content__label" for="Interior-accessory">Аксессуар для интерьера</label>
                 </li>
                 <li class="fieldset-content__item">
                   <input type="radio" class="visually-hidden fieldset-content__radio" name="kids toy" id="kids-toy" />
-                  <label for="kids-toy">Детская игрушка</label>
+                   <label class="fieldset-content__label" for="kids-toy">Детская игрушка</label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset class="filter__fieldset fieldset-content">
-              <legend>Цвет</legend>
+            <fieldset class="fieldset-content">
+              <legend class="fieldset-content__legend">Цвет</legend>
               <ul class="fieldset-content__list">
                 <li class="fieldset-content__item">
                   <input type="checkbox" class="visually-hidden fieldset-content__radio" name="white" id="white" checked />
-                  <label for="white">Белый</label>
+                   <label class="fieldset-content__label" for="white">Белый</label>
                 </li>
                 <li class="fieldset-content__item">
                   <input type="checkbox" class="visually-hidden fieldset-content__radio" name="gray" id="gray" checked />
-                  <label for="gray">Серый</label>
+                   <label class="fieldset-content__label" for="gray">Серый</label>
                 </li>
                 <li class="fieldset-content__item">
                   <input type="checkbox" class="visually-hidden fieldset-content__radio" name="tiffany" id="tiffany" />
-                  <label for="tiffany">«Тиффани»</label>
+                   <label class="fieldset-content__label" for="tiffany">«Тиффани»</label>
                 </li>
                 <li class="fieldset-content__item">
                   <input type="checkbox" class="visually-hidden fieldset-content__radio" name="black" id="black" />
-                  <label for="black">Черный</label>
+                   <label class="fieldset-content__label" for="black">Черный</label>
                 </li>
                 <li class="fieldset-content__item">
                   <input type="checkbox" class="visually-hidden fieldset-content__radio" name="pink" id="pink" />
-                  <label for="pink">Розовый</label>
+                   <label class="fieldset-content__label" for="pink">Розовый</label>
                 </li>
                 <li class="fieldset-content__item">
                   <input type="checkbox" class="visually-hidden fieldset-content__radio" name="orange" id="orange" />
-                  <label for="orange">Оранжевый</label>
+                   <label class="fieldset-content__label" for="orange">Оранжевый</label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset class="filter__fieldset fieldset-content">
-              <legend>ФИО</legend>
+            <fieldset class="fieldset-content">
+              <legend class="fieldset-content__legend">ФИО</legend>
               <ul class="fieldset-content__list">
                 <li class="fieldset-content__item">
                   <input class="fieldset-content__field" id="first-name" type="text" value="Введите ваше имя*" name="first-name" />
-                  <label for="first-name">Имя:</label>
+                   <label class="fieldset-content__label" for="first-name">Имя:</label>
                 </li>
                 <li class="fieldset-content__item">
                   <input class="fieldset-content__field" id="last-name" type="text" value="Укажите фамилию*" name="last-name" />
-                  <label for="last-name">Фамилия:</label>
+                   <label class="fieldset-content__label" for="last-name">Фамилия:</label>
                 </li>
                 <li class="fieldset-content__item">
                   <input class="fieldset-content__field" id="middle-name" type="text" value="Отчество, если желаете" name="middle-name" />
-                  <label for="middle-name">Отчество:</label>
+                   <label class="fieldset-content__label" for="middle-name">Отчество:</label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset class="filter__fieldset fieldset-content">
-              <legend>тел</legend>
+            <fieldset class="fieldset-content">
+              <legend class="fieldset-content__legend">тел</legend>
               <ul class="fieldset-content__list">
                 <li class="fieldset-content__item">
                   <input class="fieldset-content__field fieldset-content__field--phone" id="phone" type="text" value="+7 ХХХ ХХХ ХХ ХХ*" name="phone" />
@@ -117,18 +110,18 @@
               </ul>
             </fieldset>
 
-            <fieldset class="filter__fieldset fieldset-content">
-              <legend>E-mail</legend>
+            <fieldset class="fieldset-content">
+              <legend class="fieldset-content__legend">E-mail</legend>
               <ul class="fieldset-content__list">
                 <li class="fieldset-content__item">
                   <input class="fieldset-content__field fieldset-content__field--email" id="email" type="text" value="Ваш Email*" name="email" />
-                  <label class="visually-hidden" for="email">Телефон:</label>
+                  <label class="visually-hidden" for="email">E-mail:</label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset class="filter__fieldset fieldset-content">
-              <legend>Доп</legend>
+            <fieldset class="fieldset-content">
+              <legend class="fieldset-content__legend">Доп</legend>
               <ul class="fieldset-content__list">
                 <li class="fieldset-content__item">
                   <textarea class="fieldset-content__textarea" id="text-of-letter" placeholder="Опишите все ваши пожелания к заказу"></textarea>
@@ -166,7 +159,7 @@
           </svg>
         </div>
         <div class="page-footer__copyright">
-          <a href=""></a>
+          <a href="#">Разработано</a>
         </div>
       </div>
     </footer>
