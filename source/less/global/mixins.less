@@ -1,0 +1,23 @@
+.backimg (@img;@width;@height) {
+  display: block;
+  width: @width;
+  height: @height;
+  background-image: url("@{url}");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.font(@font-size;@line-height;@weight;@color:@c-black) {
+  font-family: "Open Sans", sans-serif;
+  font-weight: @weight;
+  font-size: @font-size;
+  line-height: @line-height;
+  text-decoration: none;
+  color: @color;
+}
+
+.offbulit() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
