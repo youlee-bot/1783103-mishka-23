@@ -1,4 +1,36 @@
+.page-header {
+  width: @mobile-width;
+}
+
+.page-header__wrapper {
+  display: grid;
+
+  @media (max-width: @max-mobile) {
+    grid-template-areas: "logo button" "menu menu" "usermenu usermenu";
+    align-items: center;
+    grid-template-columns: 1fr min-content;
+  }
+
+  @media (min-width: @min-tablet) {
+    grid-template-areas: "logo usermenu" "menu slogan";
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+  }
+}
+
 .page-header__logo {
-  @url: "../img/logo-1.svg";
-  .backimg(@url;85px;35px);
+  grid-area: logo;
+
+  @media (max-width: @max-mobile) {
+    margin: 22px 0 22px 30px;
+    justify-self: center;
+    @url: "../img/logo-1.svg";
+    .backimg(@url;85px;35px);
+  }
+
+  @media (min-width: @min-tablet) {
+    @url: "../img/logo-2.svg";
+    .backimg(@url;114px;45px);
+    margin: 22px 0 21px 50px;
+  }
 }

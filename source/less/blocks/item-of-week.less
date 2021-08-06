@@ -1,19 +1,122 @@
+.item-of-week__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: @max-mobile) {
+    width: @mobile-width;
+    margin: 0 auto;
+
+    header {
+      margin: 0 30px 0 30px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (min-width: @min-tablet) {
+    width: @tablet-width;
+    margin: 0 auto;
+
+    header {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
 .item-of-week__title {
   .font(25px;30px;bold);
+  flex-grow: 1;
 }
 
 .item-of-week__label {
-  .font(17px;20px;bold;@c-aqua);
+  @media (max-width: @max-mobile) {
+    .font(17px;20px;bold;@c-aqua);
+  }
+
+  @media (min-width: @min-tablet) {
+    .font(17px;17px;bold;@c-aqua);
+    text-align: center;
+    width: 100px;
+    flex-grow: 0;
+  }
+}
+
+.item-of-week__body {
+  @media (max-width: @max-mobile) {
+    margin: 0 30px 0 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @min-tablet) {
+    display: grid;
+    grid-template-areas: "text img" "table img" "price img" "button img";
+    margin-top: 50.5px;
+  }
 }
 
 .item-of-week__text {
-  .font(15px;24px;normal;@c-gray);
+  @media (max-width: @max-mobile) {
+    .font(15px;24px;normal;@c-gray);
+  }
+
+  @media (min-width: @min-tablet) {
+    display: block;
+    margin: 0;
+    .font(17px;30px;normal;@c-gray);
+    grid-area: text;
+  }
 }
 
 .item-of-week__table {
-  .font(15px;20px;normal;@c-gray);
+  @media (max-width: @max-mobile) {
+    .font(15px;20px;normal;@c-gray);
+    width: @mobile-width;
+  }
+
+  @media (min-width: @min-tablet) {
+    .font(15px;20px;normal;@c-gray);
+    grid-area: table;
+  }
+}
+
+.item-of-week__img {
+  @media (max-width: @max-mobile) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: @min-tablet) {
+    grid-area: img;
+    margin-left: 42px;
+  }
 }
 
 .item-of-week__price {
-  .font(17px;24px;bold;@c-gray);
+  @media (max-width: @max-mobile) {
+    .font(17px;24px;bold;@c-gray);
+    justify-self: center;
+  }
+
+  @media (min-width: @min-tablet) {
+    grid-area: price;
+    .font(20px;24px;bold;@c-gray);
+    justify-self: center;
+  }
+}
+
+.item-of-week__button {
+  @media (max-width: @max-mobile) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0 16px 0;
+  }
+
+  @media (min-width: @min-tablet) {
+    grid-area: button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
