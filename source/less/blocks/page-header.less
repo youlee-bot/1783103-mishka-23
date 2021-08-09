@@ -16,6 +16,13 @@
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: min-content;
   }
+
+  @media (min-width: @min-desktop) {
+    grid-template-areas: "menu logo usermenu" "othermenu . slogan";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: min-content;
+  }
+
 }
 
 .page-header__logo {
