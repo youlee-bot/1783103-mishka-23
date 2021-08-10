@@ -1,0 +1,81 @@
+.feedbacks__wrapper {
+  @media (max-width: @max-mobile) {
+    margin: 0 30px 0 30px;
+  }
+
+  @media (min-width: @min-tablet) {
+    width: @tablet-width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: "title button" "text text" "author slider";
+  }
+
+  @media (min-width: @min-desktop) {
+    margin: 0 auto;
+    width: @desktop-width;
+    background-image: url("../../img/review.jpg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    min-height: 475px;
+  }
+}
+
+.feedbacks__header {
+  @media (min-width: @min-desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.feedbacks__title {
+  @media (min-width: @min-tablet) {
+    grid-area: title;
+  }
+}
+
+.feedbacks__button {
+  @media (min-width: @min-tablet) {
+    grid-area: button;
+    justify-self: end;
+    align-self: start;
+    padding: 16px 26px 16px 26px;
+    margin-top: 35px;
+  }
+}
+
+.feedbacks__body {
+  @media (max-width: @max-mobile) {
+    .font(15px;30px;normal;@c-gray);
+  }
+
+  @media (min-width: @min-tablet) {
+    .font(17px;30px;normal;@c-gray);
+    grid-area: text;
+  }
+}
+
+.feedbacks__author {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: @max-mobile) {
+    .font(17px;24px;bold);
+  }
+
+  @media (min-width: @min-tablet) {
+    grid-area: author;
+  }
+}
+
+.feedbacks-body__user-link {
+  @media (max-width: @max-mobile) {
+    .font(17px;24px;normal;@c-gray);
+  }
+}
+
+.feedbacks-body__toggles {
+  @media (min-width: @min-tablet) {
+    grid-area: slider;
+    justify-self: end;
+  }
+}
