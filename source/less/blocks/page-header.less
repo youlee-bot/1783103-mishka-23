@@ -18,11 +18,12 @@
   }
 
   @media (min-width: @min-desktop) {
-    grid-template-areas: "menu logo usermenu" "othermenu . slogan";
+    grid-template-areas: "menu logo usermenu";
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: min-content;
+    width: @desktop-width;
+    margin: 0 auto;
   }
-
 }
 
 .page-header__logo {

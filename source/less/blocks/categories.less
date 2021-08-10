@@ -1,5 +1,6 @@
 .categories__header {
   display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -45,7 +46,7 @@
     }
 
     @media (min-width: @min-tablet) {
-      .font(20px;30 px;bold;@c-white);
+      .font(20px;30px;bold;@c-white);
       padding: 25px 0 34px 36px;
     }
   }
@@ -72,5 +73,10 @@
   @media (min-width: @min-tablet) {
     margin: 0 auto;
     width: 86.52%;
+  }
+
+  @media (min-width: @min-desktop) {
+    margin: 0 auto;
+    width: @desktop-width;
   }
 }
