@@ -1,4 +1,6 @@
 .page-footer {
+  flex-shrink: 0;
+
   @media (min-width: @min-tablet) {
     min-height: 143px;
     background-color: @c-F1F1F1;
@@ -52,6 +54,10 @@
     justify-content: space-between;
     width: @tablet-width;
     margin: 0 auto;
+  }
+
+  @media (min-width: @min-desktop) {
+    width: 1050px;
   }
 }
 

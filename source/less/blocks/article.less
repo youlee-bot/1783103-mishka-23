@@ -1,7 +1,48 @@
+.article__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @min-tablet) {
+    display: grid;
+    grid-template-areas: "img" "title" "content" "button";
+  }
+}
+
+.article__video {
+  grid-area: img;
+
+  @media (min-width: @min-tablet) {
+    justify-self: center;
+  }
+}
+
 .article__title {
-  .font(17px;24px;bold);
+  @media (max-width: @max-mobile) {
+    .font(17px;24px;bold);
+  }
+
+  @media (min-width: @min-tablet) {
+    .font(20px;24px;bold);
+    grid-area: title;
+  }
 }
 
 .article__text {
-  .font(13px;24px;bold;@c-gray);
+  grid-area: content;
+
+  @media (max-width: @max-mobile) {
+    .font(13px;24px;bold;@c-gray);
+  }
+
+  @media (min-width: @min-tablet) {
+    .font(15px;30px;bold;@c-gray);
+  }
+
+  @media (min-width: @min-desktop) {
+    .font(15px;30px;bold;@c-gray);
+  }
+}
+
+.article__button {
+  grid-area: button;
 }

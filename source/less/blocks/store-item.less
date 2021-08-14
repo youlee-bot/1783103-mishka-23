@@ -1,11 +1,41 @@
 .store-item__title {
-  .font(17px;24px;bold);
+  @media (max-width: @max-mobile) {
+    .font(17px;24px;bold);
+  }
+
+  @media (min-width: @min-tablet) {
+    .font(20px;24px;bold);
+  }
 }
 
 .store-item__description {
-  .font(13px;30px;normal;@c-gray);
+  @media (max-width: @max-mobile) {
+    .font(13px;30px;normal;@c-gray);
+  }
+
+  @media (min-width: @min-tablet) {
+    .font(15px;30px;normal;@c-gray);
+  }
 }
 
 .store-item__price-content {
-  .font(15px;24px;bold);
+  @media (max-width: @max-mobile) {
+    .font(15px;24px;bold);
+  }
+
+  @media (min-width: @min-tablet) {
+    .font(17px;24px;bold);
+  }
+}
+
+.store-item__img {
+  grid-area: img;
+}
+
+.store-item__body {
+  grid-area: body;
+}
+
+.store-item__price-block {
+  grid-area: price;
 }
