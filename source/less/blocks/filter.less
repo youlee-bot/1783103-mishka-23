@@ -1,7 +1,50 @@
-.filter__title {
-  .font(27px;30px;bold;@c-gray);
+.filter__description {
+  @media (max-width: @max-mobile) {
+    .font(13px;24px;normal;@c-gray);
+  }
+
+  @media (min-width: @min-tablet) {
+    .font(17px;30px;normal;@c-gray);
+  }
+
+  @media (min-width: @min-desktop) {
+    .font(17px;30px;normal;@c-gray);
+  }
 }
 
-.filter__description {
-  .font(13px;24px;normal;@c-gray);
+.filter__title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @c-FAFAFA;
+  width: 100%;
+
+  @media (max-width: @max-mobile) {
+    min-height: 177px;
+  }
+
+  @media (min-width: @min-tablet) {
+    min-height: 181.5px;
+  }
+
+  @media (min-width: @min-desktop) {
+    min-height: 210.5px;
+  }
+}
+
+.filter__wrapper {
+  @media (max-width: @max-mobile) {
+    margin: 0 auto;
+    width: 86.52%;
+  }
+
+  @media (min-width: @min-tablet) {
+    margin: 0 auto;
+    width: @tablet-width;
+  }
+
+  @media (min-width: @min-desktop) {
+    margin: 0 auto;
+    width: @desktop-width;
+  }
 }
