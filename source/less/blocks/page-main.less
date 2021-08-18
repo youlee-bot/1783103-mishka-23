@@ -2,6 +2,16 @@
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: @max-mobile) {
+    margin-top: 80px;
+  }
+}
+
+.page-main--nojs {
+  @media (max-width: @max-mobile) {
+    margin-top: 0;
+  }
 }
 
 .page-main__gray-fieldset {
@@ -11,5 +21,42 @@
 
   @media (min-width: @min-desktop) {
     background-color: @c-F1F1F1;
+  }
+}
+
+.page-main__zigzag-line {
+  width: 100%;
+  background-image: url("../../img/zigzag-line.png");
+  background-position: 0 0;
+  background-size: 100%;
+
+  @media (max-width: @max-mobile) {
+    height: 6px;
+  }
+
+  @media (min-width: @min-tablet) {
+    height: 17px;
+  }
+
+  @media (min-width: @min-desktop) {
+    height: 23px;
+    width: @desktop-width;
+    margin: 0 auto;
+  }
+}
+
+.page-main__zigzag-fill {
+  width: 100%;
+  background-image: url("../../img/zigzag-fill.png");
+  background-position: 0 0;
+
+  @media (max-width: @max-mobile) {
+    display: none;
+  }
+
+  @media (min-width: @min-tablet) {
+    margin-top: -63px;
+    height: 24px;
+    z-index: 10;
   }
 }
