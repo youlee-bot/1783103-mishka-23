@@ -1,4 +1,20 @@
+.store-item {
+  margin-bottom: 30px;
+  border: 1px solid #ececec;
+
+  @media (max-width: @max-mobile) {
+    width: @mobile-width;
+  }
+
+  @media (min-width: @min-desktop) {
+    margin-bottom: 58px;
+  }
+}
+
 .store-item__title {
+  display: inline-block;
+  margin: 0;
+
   @media (max-width: @max-mobile) {
     .font(17px;24px;bold);
   }
@@ -11,31 +27,91 @@
 .store-item__description {
   @media (max-width: @max-mobile) {
     .font(13px;30px;normal;@c-gray);
+    margin: 6px 0 21px 0;
   }
 
   @media (min-width: @min-tablet) {
     .font(15px;30px;normal;@c-gray);
+    margin: 6px 0 21px 0;
   }
 }
 
 .store-item__price-content {
+  position: relative;
+
   @media (max-width: @max-mobile) {
     .font(15px;24px;bold);
+    padding-top: 21px;
+    margin: 0;
+    border-top: 1px solid #ececec;
   }
 
   @media (min-width: @min-tablet) {
     .font(17px;24px;bold);
+    padding-top: 23.5px;
+    margin: 0;
+    border-top: 1px solid #ececec;
+  }
+
+  @media (min-width: @min-desktop) {
+    .font(17px;24px;bold);
+    padding: 23.5px 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 19px;
+    right: 0;
+    bottom: 27px;
+    background-image: url("../../img/basket.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
   }
 }
 
 .store-item__img {
   grid-area: img;
+
+  @media (max-width: @max-mobile) {
+    align-self: center;
+    object-fit: cover;
+    width: 101%;
+    height: 101%;
+  }
 }
 
 .store-item__body {
   grid-area: body;
+
+  @media (max-width: @max-mobile) {
+    border-top: none;
+    padding: 28px 28px 0 28px;
+  }
+
+  @media (min-width: @min-tablet) {
+    padding: 27px 39px 0 34px;
+  }
+
+  @media (min-width: @min-desktop) {
+    padding: 27px 40px 0 28px;
+  }
 }
 
 .store-item__price-block {
   grid-area: price;
+
+  @media (max-width: @max-mobile) {
+    border-top: none;
+    padding: 0 28px 26.5px 28px;
+  }
+
+  @media (min-width: @min-tablet) {
+    padding: 27px 39px 23.5px 34px;
+  }
+
+  @media (min-width: @min-desktop) {
+    padding: 27px 39px 0 34px;
+  }
 }

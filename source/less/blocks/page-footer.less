@@ -15,23 +15,20 @@
 
   a {
     .font(19px;18px;bold);
-    margin-right: 28px;
     text-decoration: none;
   }
 
   @media (max-width: @max-mobile) {
-    align-self: center;
-    display: flex;
-
     a {
       padding: 29.15px 54px 31.85px 0;
     }
   }
 
   @media (min-width: @min-tablet) {
-    padding: 20px;
+    a {
+      margin-right: 28px;
+    }
   }
-
 
   &:hover {
     svg > path {
@@ -92,5 +89,6 @@
   @media (max-width: @max-mobile) {
     background-color: @c-F1F1F1;
     width: @mobile-width;
+    margin-top: 25px;
   }
 }

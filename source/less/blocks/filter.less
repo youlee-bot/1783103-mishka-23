@@ -1,6 +1,13 @@
+.filter {
+  .page-main__zigzag-fill {
+    margin-top: -24px;
+  }
+}
+
 .filter__description {
   @media (max-width: @max-mobile) {
     .font(13px;24px;normal;@c-gray);
+    margin: 17px 0 7px 0;
   }
 
   @media (min-width: @min-tablet) {
@@ -33,18 +40,29 @@
 }
 
 .filter__wrapper {
+  display: grid;
+
   @media (max-width: @max-mobile) {
     margin: 0 auto;
     width: 86.52%;
+    grid-template-columns: 1fr;
   }
 
   @media (min-width: @min-tablet) {
     margin: 0 auto;
     width: @tablet-width;
+    grid-template-columns: 1fr;
   }
 
   @media (min-width: @min-desktop) {
     margin: 0 auto;
     width: @desktop-width;
+    grid-template-columns: 1fr;
+  }
+}
+
+.filter-content__disclaimer {
+  @media (max-width: @max-mobile) {
+    margin: 17px 0 15px 0;
   }
 }
