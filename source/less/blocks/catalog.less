@@ -1,3 +1,15 @@
+.catalog {
+  .page-main__zigzag-fill {
+    margin-top: -24px;
+  }
+}
+
+.catalog-title {
+  @media (min-width: @min-tablet) {
+    margin-top: -24px;
+  }
+}
+
 .catalog__header {
   display: flex;
   justify-content: center;
@@ -26,6 +38,7 @@
 
   @media (min-width: @min-tablet) {
     margin: 0 auto;
+    overflow: hidden;
     width: @tablet-width;
   }
 
@@ -42,9 +55,15 @@
 
   @media (max-width: @max-mobile) {
     align-items: center;
+    margin-top: 30px;
+  }
+
+  @media (min-width: @min-tablet) {
+    margin-top: 63px;
   }
 
   @media (min-width: @min-desktop) {
+    margin-top: 111px;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -63,6 +82,7 @@
 
   @media (min-width: @min-desktop) {
     display: flex;
-    width: 197px;
+    justify-content: space-between;
+    width: 316px;
   }
 }
