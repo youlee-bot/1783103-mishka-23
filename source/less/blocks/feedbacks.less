@@ -35,10 +35,14 @@
   @media (min-width: @min-desktop) {
     margin: 0 auto;
     width: @desktop-width;
-    background-image: url("../../img/review.jpg");
     background-position: left center;
     background-repeat: no-repeat;
     min-height: 475px;
+    background-image: url("../../img/review.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/review@2x.jpg");
+    }
   }
 }
 
