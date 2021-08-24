@@ -9,6 +9,7 @@
 
   @media (min-width: @min-desktop) {
     margin-bottom: 68px;
+    margin-top: 54px;
   }
 }
 
@@ -42,9 +43,6 @@
   @media (min-width: @min-desktop) {
     margin: 0 auto;
     width: @desktop-width;
-    background-image: url("../../img/triple-set-big.jpg");
-    background-position: right center;
-    background-repeat: no-repeat;
     min-height: 525px;
   }
 }
@@ -93,8 +91,8 @@
   }
 
   @media (min-width: @min-desktop) {
-    margin-left: 100px;
-    padding-right: 585px;
+    margin-left: 123px;
+    margin-top: -110px;
   }
 }
 
@@ -113,6 +111,7 @@
 
   @media (min-width: @min-desktop) {
     margin-bottom: 30px;
+    margin-top: 145px;
   }
 }
 
@@ -139,18 +138,27 @@
   }
 }
 
+.item-of-week__img-wrapper {
+  grid-area: img;
+  z-index: -10;
+}
+
 .item-of-week__img {
   @media (max-width: @max-mobile) {
     margin: 14px auto 14px auto;
+    width: 260px;
+    height: 315px;
   }
 
   @media (min-width: @min-tablet) {
-    grid-area: img;
     margin: 13px 0 0 42px;
+    width: 334px;
+    height: 404px;
   }
 
   @media (min-width: @min-desktop) {
-    display: none;
+    width: 525px;
+    height: 636px;
   }
 }
 

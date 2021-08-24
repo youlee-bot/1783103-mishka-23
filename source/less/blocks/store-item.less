@@ -39,6 +39,18 @@
 .store-item__price-content {
   position: relative;
 
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 19px;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../img/basket.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
   @media (max-width: @max-mobile) {
     .font(15px;24px;bold);
     padding-top: 21px;
@@ -56,29 +68,46 @@
   @media (min-width: @min-desktop) {
     .font(17px;24px;bold);
     padding: 23.5px 0;
-  }
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 19px;
-    right: 0;
-    bottom: 27px;
-    background-image: url("../../img/basket.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    &::after {
+      right: 0;
+      bottom: 27px;
+    }
   }
 }
 
-.store-item__img {
+.store-item__img-wrapper {
   grid-area: img;
+  overflow: hidden;
 
+  @media (max-width: @max-mobile) {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: @min-tablet) {
+    width: 334px;
+    height: 334px;
+  }
+
+  @media (min-width: @min-desktop) {
+    width: 316px;
+    height: 462px;
+  }
+}
+
+
+.store-item__img {
   @media (max-width: @max-mobile) {
     align-self: center;
     object-fit: cover;
     width: 101%;
     height: 101%;
+  }
+
+  @media (min-width: @min-tablet) {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -109,9 +138,11 @@
 
   @media (min-width: @min-tablet) {
     padding: 27px 39px 23.5px 34px;
+    align-self: end;
   }
 
   @media (min-width: @min-desktop) {
     padding: 27px 39px 0 34px;
+    align-self: stretch;
   }
 }

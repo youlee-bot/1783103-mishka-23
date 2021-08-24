@@ -2,26 +2,32 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  background-color: @c-FAFAFA;
+  background-repeat: no-repeat;
+  background-image: url("../../img/header-back.jpg");
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/header-back@2x.jpg");
+  }
 
   @media (max-width: @max-mobile) {
     justify-content: center;
     min-height: 283px;
-    background-image: url("../../img/header-back.jpg");
+    background-size: 373px auto;
+    background-position: 50% -20px;
   }
 
   @media (min-width: @min-tablet) {
-    min-height: 627px;
-    background-image: url("../../img/header-back-2.jpg");
+    min-height: 700px;
+    background-size: 800px auto;
+    background-position: 50% -75px;
   }
-  background-color: @c-FAFAFA;
-  background-position: center top;
-  background-repeat: no-repeat;
 }
 
 .categories__title {
   @media (max-width: @max-mobile) {
-    margin: 50px;
+    margin: 30px;
+    text-align: center;
   }
 
   @media (min-width: @min-tablet) {
