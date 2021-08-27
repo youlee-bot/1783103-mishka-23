@@ -1,4 +1,5 @@
 .store-item {
+  position: relative;
   margin-bottom: 30px;
   border: 1px solid #ececec;
 
@@ -9,6 +10,12 @@
   @media (min-width: @min-desktop) {
     margin-bottom: 58px;
   }
+}
+
+.store-item__body-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 257px;
 }
 
 .store-item__title {
@@ -67,11 +74,9 @@
 
   @media (min-width: @min-desktop) {
     .font(17px;24px;bold);
-    padding: 23.5px 0;
-
+    margin: 23.5px 0;
     &::after {
       right: 0;
-      bottom: 27px;
     }
   }
 }
@@ -120,11 +125,11 @@
   }
 
   @media (min-width: @min-tablet) {
-    padding: 27px 39px 0 34px;
+    margin: 27px 39px 0 34px;
   }
 
   @media (min-width: @min-desktop) {
-    padding: 27px 40px 0 28px;
+    margin: 27px 40px 0 28px;
   }
 }
 
@@ -137,12 +142,12 @@
   }
 
   @media (min-width: @min-tablet) {
-    padding: 27px 39px 23.5px 34px;
+    margin: 27px 39px 23.5px 34px;
     align-self: end;
   }
 
   @media (min-width: @min-desktop) {
-    padding: 27px 39px 0 34px;
+    margin: 27px 39px 0 34px;
     align-self: stretch;
   }
 }

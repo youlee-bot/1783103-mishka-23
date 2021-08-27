@@ -156,6 +156,39 @@
   }
 }
 
+.fieldset-content__field:hover {
+   &+svg>g {
+     opacity: 1;
+    fill:@c-aqua;
+   }
+
+   &+svg>path {
+     opacity: 1;
+    fill:@c-aqua;
+   }
+}
+
+.fieldset-content__field:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid @c-aqua;
+
+  &+svg>g {
+    opacity: 1;
+   fill:@c-aqua;
+  }
+
+  &+svg>path {
+    opacity: 1;
+   fill:@c-aqua;
+  }
+
+  &::placeholder {
+    color:@c-black;
+    opacity: 1;
+  }
+}
+
 .fieldset-content__field {
   border: none;
   border-bottom: 2px solid @c-black;
@@ -173,30 +206,6 @@
 
   @media (min-width: @min-desktop) {
     height: 52px;
-  }
-}
-
-.fieldset-content__textarea {
-  @media (max-width: @max-mobile) {
-    height: 140px;
-    width: 100%;
-    margin-top: 30px;
-  }
-
-  @media (min-width: @min-tablet) {
-    height: 142px;
-    width: 100%;
-  }
-}
-
-.filter-content__button {
-  @media (max-width: @max-mobile) {
-    margin: 15px 0 55px 0;
-    padding: 18px 0;
-  }
-
-  @media (min-width: @min-tablet) {
-    order: -1;
   }
 }
 
@@ -230,19 +239,51 @@
   }
 }
 
-.fieldset-content-textarea {
-  @media (max-width: @max-mobile) {
-    .font(17px;18px;normal;#B3B3B3);
-  }
-
+.fieldset-content__textarea-wrapper {
   @media (min-width: @min-tablet) {
     min-height: 142px;
-    .font(19px;18px;normal;#B3B3B3);
 
     .fieldset-content__item {
       display: block;
     }
   }
+
+  @media (min-width: @min-desktop) {
+
+    .fieldset-content__item {
+      display: flex;
+    }
+  }
+}
+
+.fieldset-content__textarea {
+  @media (max-width: @max-mobile) {
+    .font(17px;18px;normal;#B3B3B3);
+    height: 140px;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  @media (min-width: @min-tablet) {
+    .font(19px;18px;normal;#B3B3B3);
+    height: 142px;
+    width: 100%;
+  }
+}
+
+.fieldset-content__textarea:hover {
+  border: 2px solid @c-aqua;
+}
+
+.fieldset-content__textarea:focus {
+  border: 2px solid @c-aqua;
+  outline: none;
+  color: @c-black;
+
+   &::placeholder {
+     color:@c-black;
+     opacity: 1;
+   }
 }
 
 .filter__bottom-wrapper {
