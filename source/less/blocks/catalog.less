@@ -73,6 +73,7 @@
 .catalog__item {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   @media (min-width: @min-tablet) {
     display: grid;
@@ -81,8 +82,26 @@
   }
 
   @media (min-width: @min-desktop) {
+    align-items: space-between;
     display: flex;
-    justify-content: space-between;
     width: 316px;
+    margin-left: 10px;
+
+    &:hover {
+      .catalog__item-shadow {
+        display: block;
+      }
+    }
   }
+}
+
+.catalog__item-shadow {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: calc(~"100% - 462px");
+  background-color: @c-white;
+  bottom: 0;
+  z-index: -1;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
 }
