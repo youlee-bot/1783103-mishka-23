@@ -22,9 +22,9 @@
     </head>
     <body class="page-body">
         <header class="page-header main-nav other-nav">
-            <div class="page-header__wrapper">
-                <a class="page-header__logo" href="index.html"></a>
-                <div class="main-nav__toggle main-nav__toggle--closed">
+            <div class="page-header__wrapper page-header__wrapper--nojs">
+                <a class="page-header__logo page-header__logo--nojs" href="index.html"></a>
+                <div class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs">
                     <span class="visually-hidden">Открыть меню</span>
                 </div>
                 <nav class="main-nav__menu">
@@ -82,7 +82,7 @@
             </div>
         </header>
 
-        <main class="page-main">
+        <main class="page-main page-main--nojs">
 
             <section class="catalog">
                 <header class="catalog__header">
@@ -94,15 +94,19 @@
                         <li class="catalog__item store-item">
                           <div class="catalog__item-shadow"></div>
                             <div class="store-item__img-wrapper">
+                              <a href="#" class="store-item__img-link">
                                 <picture>
+                                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop@2x.webp 2x">
+                                    <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x">
                                     <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x" />
                                     <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x" />
                                     <img class="store-item__img" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик" />
                                 </picture>
+                              </a>
                             </div>
                             <div class="store-item__body-wrapper">
                             <div class="store-item__body">
-                                <h3 class="store-item__title">Зайчик-попрыгайчик</h3>
+                                <h3 class="store-item__title"><a href="#" class="store-item__title-link">Зайчик-попрыгайчик</a></h3>
                                 <p class="store-item__description">Рост 30 см, вес 200 г</p>
                             </div>
                             <div class="store-item__price-block">
@@ -113,15 +117,19 @@
                         <li class="catalog__item store-item">
                           <div class="catalog__item-shadow"></div>
                             <div class="store-item__img-wrapper">
+                              <a href="#" class="store-item__img-link">
                                 <picture>
+                                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-2-desktop.webp 1x, img/photo-2-desktop@2x.webp 2x">
+                                    <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-2-tablet.webp 1x, img/photo-2-tablet@2x.webp 2x">
                                     <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x" />
                                     <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x" />
                                     <img class="store-item__img" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Корзинка для белья" />
                                 </picture>
+                              </a>
                             </div>
                             <div class="store-item__body-wrapper">
                             <div class="store-item__body">
-                                <h3 class="store-item__title">Корзинка для белья</h3>
+                                <h3 class="store-item__title"><a href="#" class="store-item__title-link">Корзинка для белья</a></h3>
                                 <p class="store-item__description">Диаметр 15 см, высота 10 см</p>
                             </div>
                             <div class="store-item__price-block">
@@ -132,15 +140,19 @@
                         <li class="catalog__item store-item">
                           <div class="catalog__item-shadow"></div>
                             <div class="store-item__img-wrapper">
+                              <a href="#" class="store-item__img-link">
                                 <picture>
+                                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-3-desktop.webp 1x, img/photo-3-desktop@2x.webp 2x">
+                                    <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-3-tablet.webp 1x, img/photo-3-tablet@2x.webp 2x">
                                     <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x" />
                                     <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x" />
                                     <img class="store-item__img" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек" />
                                 </picture>
+                              </a>
                             </div>
                             <div class="store-item__body-wrapper">
                             <div class="store-item__body">
-                                <h3 class="store-item__title">Большая корзинка для игрушек</h3>
+                                <h3 class="store-item__title"><a href="#" class="store-item__title-link">Большая корзинка для игрушек</a></h3>
                                 <p class="store-item__description">Диаметр 30 см, высота 30 см</p>
                             </div>
                             <div class="store-item__price-block">
@@ -158,6 +170,8 @@
                         <h2 class="article__title">Процесс производства</h2>
                         <div class="article__video-container">
                             <picture>
+                                <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop.webp 1x, img/video-@2x.webp 2x">
+                                <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet.webp 1x, img/video-@2x.webp 2x">
                                 <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x" />
                                 <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x" />
                                 <img class="article__video" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Корзинка для белья" />
@@ -254,5 +268,31 @@
                 </div>
             </div>
         </footer>
+        <div class="page-body__modal-background"></div>
+        <section class="modal modal--catalog ">
+          <div class="modal__wrapper">
+          <h2 class="modal__title">Добавить в корзину</h2>
+          <p class="modal__text">Выберите размер:</p>
+          <form class="filter__form filter-content" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="modal__fieldset">
+            <ul class="modal__fieldset-list">
+                <li class="modal__fieldset-item">
+                    <input type="radio" class="visually-hidden modal__fieldset-radio" name="type" id="S" checked />
+                    <label class="modal__fieldset-label" for="S">S</label>
+                </li>
+                <li class="modal__fieldset-item">
+                  <input type="radio" class="visually-hidden modal__fieldset-radio" name="type" id="M" />
+                  <label class="modal__fieldset-label" for="M">M</label>
+              </li>
+              <li class="modal__fieldset-item">
+                <input type="radio" class="visually-hidden modal__fieldset-radio" name="type" id="L" />
+                <label class="modal__fieldset-label" for="L">L</label>
+            </li>
+            </ul>
+        </fieldset>
+        <button type="button" class="button modal__button">Добавить</button>
+      </form>
+</div>
+        </section>
     </body>
 </html>

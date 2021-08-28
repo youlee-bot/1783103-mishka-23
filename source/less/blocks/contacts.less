@@ -89,6 +89,10 @@
     span {
       .font(14px;30px;normal;@c-gray);
     }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
   }
 
   @media (min-width: @min-tablet) {
@@ -125,10 +129,17 @@
   margin-left: 20px;
 }
 
+.contacts__table-name {
+  @media (max-width: @max-mobile) {
+    span {
+      white-space: pre;
+    }
+  }
+}
+
 .contacts__email-span {
   border-bottom: 1px solid @c-aqua;
   text-decoration: none;
-  .font(17px;30px;normal;@c-gray);
 
   &:hover {
     transition: 0.3s;
@@ -141,10 +152,12 @@
   }
 
   @media (max-width: @max-mobile) {
+    .font(14px;30px;normal;@c-gray);
     padding-bottom: 5px;
   }
 
   @media (min-width: @min-tablet) {
+    .font(17px;30px;normal;@c-gray);
     padding-bottom: 8px;
   }
 

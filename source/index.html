@@ -22,9 +22,9 @@
     </head>
     <body class="page-body">
         <header class="page-header main-nav other-nav">
-            <div class="page-header__wrapper">
-                <a class="page-header__logo"></a>
-                <div class="main-nav__toggle main-nav__toggle--closed">
+            <div class="page-header__wrapper page-header__wrapper--nojs">
+                <a class="page-header__logo page-header__logo--nojs"></a>
+                <div class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs">
                     <span class="visually-hidden">Открыть меню</span>
                 </div>
                 <nav class="main-nav__menu">
@@ -82,7 +82,7 @@
             </div>
         </header>
 
-        <main class="page-main">
+        <main class="page-main page-main--nojs">
             <section class="categories">
                 <div class="categories__wrapper">
                     <header class="categories__header">
@@ -135,9 +135,13 @@
                             </tr>
                         </table>
                         <div class="item-of-week__img-wrapper">
-                            <picture>
-                                <img class="item-of-week__img" src="img/triple-set.jpg" srcset="img/triple-set@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки" />
-                            </picture>
+                          <picture>
+                            <source type="image/webp" media="(min-width: 1200px)" srcset="img/triple-set-desktop.webp 1x, img/triple-set-@2x.webp 2x">
+                            <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet.webp 1x, img/triple-set-@2x.webp 2x">
+                            <source media="(min-width: 1200px)" srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x" />
+                            <source media="(min-width: 768px)" srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x" />
+                            <img class="item-of-week__img" src="img/triple-set-mobile.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Корзинка для белья" />
+                          </picture>
                         </div>
                         <span class="item-of-week__price">Цена: 990 руб.</span>
                         <a class="button item-of-week__button" href="#"><span>Заказать</span></a>
@@ -199,17 +203,42 @@
                         <header>
                             <h2 class="feedbacks__title section-title">Отзывы</h2>
                         </header>
-                        <p class="feedbacks__body">
-                            Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более
-                            стильными, а также набирают больше лайков!
-                        </p>
-                        <div class="feedbacks__author">
-                            <span class="feedbacks-body__name">Анастасия Красильникова</span>
-                            <span class="feedbacks__user-link">@misssssiskras</span>
-                        </div>
+                        <ul class="feedbacks_list">
+                          <li class="feedbacks__item feedbacks__item--opened">
+                            <p class="feedbacks__body">
+                              Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более
+                              стильными, а также набирают больше лайков!
+                          </p>
+                          <div class="feedbacks__author">
+                              <span class="feedbacks-body__name">Анастасия Красильникова</span>
+                              <span class="feedbacks__user-link">@misssssiskras</span>
+                          </div>
+                          </li>
+                          <li class="feedbacks__item">
+                            <p class="feedbacks__body">
+                              Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более
+                              стильными, а также набирают больше лайков!
+                          </p>
+                          <div class="feedbacks__author">
+                              <span class="feedbacks-body__name">Анастасия Красильникова</span>
+                              <span class="feedbacks__user-link">@misssssiskras</span>
+                          </div>
+                          </li>
+                          <li class="feedbacks__item">
+                            <p class="feedbacks__body">
+                              Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более
+                              стильными, а также набирают больше лайков!
+                          </p>
+                          <div class="feedbacks__author">
+                              <span class="feedbacks-body__name">Анастасия Красильникова</span>
+                              <span class="feedbacks__user-link">@misssssiskras</span>
+                          </div>
+                          </li>
+                        </ul>
+
                         <div class="feedbacks-body__toggles slider">
-                            <button class="slider__toggles-button slider__toggles-before" type="button"></button>
-                            <button class="slider__toggles-button slider__toggles-after" type="button"></button>
+                            <button class="slider__toggles-button slider__toggles-before" type="button" aria-label="Предидущий слайд"></button>
+                            <button class="slider__toggles-button slider__toggles-after" type="button" aria-label="Следующий слайд"></button>
                         </div>
 
                         <button type="button" class="button feedbacks__button">Написать</button>
@@ -319,6 +348,34 @@
                     </svg>
                 </div>
             </div>
+            </section>
         </footer>
+        <div class="page-body__modal-background" style="display: none;"></div>
+        <section class="modal" style="display: none;">
+          <div class="modal__wrapper">
+          <h2 class="modal__title">Добавить в корзину</h2>
+          <p class="modal__text">Выберите размер:</p>
+          <form class="filter__form filter-content" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="modal__fieldset">
+            <ul class="modal__fieldset-list">
+                <li class="modal__fieldset-item">
+                    <input type="radio" class="visually-hidden modal__fieldset-radio" name="type" id="S" checked />
+                    <label class="modal__fieldset-label" for="S">S</label>
+                </li>
+                <li class="modal__fieldset-item">
+                  <input type="radio" class="visually-hidden modal__fieldset-radio" name="type" id="M" />
+                  <label class="modal__fieldset-label" for="M">M</label>
+              </li>
+              <li class="modal__fieldset-item">
+                <input type="radio" class="visually-hidden modal__fieldset-radio" name="type" id="L" />
+                <label class="modal__fieldset-label" for="L">L</label>
+            </li>
+            </ul>
+        </fieldset>
+        <button type="button" class="button modal__button">Добавить</button>
+      </form>
+</div>
+        </section>
+
     </body>
 </html>
