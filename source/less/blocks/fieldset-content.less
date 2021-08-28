@@ -136,6 +136,12 @@
 
   @media (max-width: @max-mobile) {
     grid-template-columns: 1fr;
+
+    svg {
+      position: absolute;
+      top: 20px;
+      right: 0;
+    }
   }
 
   @media (min-width: @min-tablet) {
@@ -291,6 +297,8 @@
   @media (max-width: @max-mobile) {
     flex-direction: column;
     justify-content: center;
+    width: 86.52%;
+    margin: 0 auto;
   }
 
   @media (min-width: @min-tablet) {
