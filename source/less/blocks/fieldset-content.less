@@ -56,6 +56,18 @@
     box-shadow: 0 0 0 2px @c-gray;
   }
 
+  &:hover {
+    &::before {
+      box-shadow: 0 0 0 2px @c-aqua;
+    }
+  }
+
+  &:active {
+    &::before {
+      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3);
+    }
+  }
+
   @media (max-width: @max-mobile) {
     margin: 27px 0 0 61px;
   }
@@ -80,6 +92,18 @@
     border: 2px solid @c-gray;
   }
 
+  &:hover {
+    &::before {
+      border: 2px solid @c-aqua;
+    }
+  }
+
+  &:active {
+    &::before {
+      border: 2px solid rgba(68, 68, 68, 0.3);
+    }
+  }
+
   @media (max-width: @max-mobile) {
     margin: 43px 0 0 61px;
   }
@@ -87,7 +111,7 @@
 
 .fieldset-content__radio:checked + .fieldset-content__checkbox-label {
   &::before {
-    background-image: url("../../img/Tick.svg");
+    background-image: url("../img/Tick.svg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
@@ -241,22 +265,6 @@
       margin: 0;
       width: 100%;
       background-color: @c-F1F1F1;
-    }
-  }
-}
-
-.fieldset-content__textarea-wrapper {
-  @media (min-width: @min-tablet) {
-    min-height: 142px;
-
-    .fieldset-content__item {
-      display: block;
-    }
-  }
-
-  @media (min-width: @min-desktop) {
-    .fieldset-content__item {
-      display: flex;
     }
   }
 }

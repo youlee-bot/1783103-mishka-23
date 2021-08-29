@@ -61,6 +61,22 @@
   }
 }
 
+.filter__textarea-wrapper {
+  @media (min-width: @min-tablet) {
+    min-height: 142px;
+
+    .fieldset-content__item {
+      display: block;
+    }
+  }
+
+  @media (min-width: @min-desktop) {
+    .fieldset-content__item {
+      display: flex;
+    }
+  }
+}
+
 .filter-content__disclaimer {
   @media (max-width: @max-mobile) {
     margin: 17px 0 15px 0;
